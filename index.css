@@ -1,0 +1,97 @@
+:root {
+	--darkCyan: hsl(158, 36%, 37%);
+	--darkenCyan: hsl(158, 36%, 22%);
+	--cream: hsl(30, 38%, 92%);
+	--darkBlue: hsl(212, 21%, 14%);
+	--grayishBlue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+	--mont: 'Montserrat', sans-serif;
+	--fraun: 'Fraunces', serif;
+}
+p{font-size: 14px;}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--cream);
+	height: 100vh;
+}
+.card {
+	max-width: 320px;
+	background-color: var(--white);
+	border-radius: 20px;
+}
+.left {
+}
+.left img {
+	width: 20rem;
+	height: 30rem;
+	border-radius: 20px 20px 0 0;
+	
+}
+.right {
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	max-width: 320px;
+}
+.product {
+	font-family: var(--mont);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: var(--grayishBlue);
+}
+h1{
+	font-family: var(--fraun);
+	padding: 15px 0;
+	color: var(--darkBlue);
+}
+.description {
+	padding: 15px 0;
+	color: var(--grayishBlue);
+	font-family: var(--mont);
+	font-size: 16px;
+}
+.prices {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 15px 0;
+}
+.oldp {
+	color: var(--grayishBlue);
+	font-family: var(--mont);
+	text-decoration: line-through;
+}
+.newp {
+	font-size: 40px;
+	font-family: var(--fraun);
+	color: var(--darkCyan);
+}
+button {
+	background-color: var(--darkCyan);
+	color: var(--white);
+	border: none;
+	padding: 15px 0;
+	font-family: var(--mont);
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+button:hover{
+	background-color: var(--darkenCyan);
+}
+@media (min-width: 768px){
+	.card {
+		display: flex;
+		max-width: 100%;
+	}
+	.left img {
+		border-radius: 20px 0 0 20px;
+	}
+}
